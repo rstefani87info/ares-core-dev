@@ -1,0 +1,23 @@
+{
+  "name": "@ares/core-dev",
+  "version": "1.0.0",
+  "description": "Command line automation for aReS fast programming",
+  "main": "index.js",
+  "scripts": {
+    "make:mapper": "node make-mapper.js"
+  },
+  "author": "Roberto Stefani",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rstefani87info/ares-core-dev.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rstefani87info/ares-core-dev/issues"
+  },
+  "homepage": "https://github.com/rstefani87info/ares-core-dev#readme",
+  "dependencies": {
+    "@ares/core": "github:rstefani87info/ares-core#master",
+    "yargs": "^17.7.2"
+  }
+}
