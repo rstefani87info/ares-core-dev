@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/rstefani87info/ares-core-dev#readme",
   "dependencies": {
-    "@ares/core": "github:rstefani87info/ares-core#master",
+    "@ares/core": "git+https://github.com/rstefani87info/ares-core.git#master",
     "yargs": "^17.7.2"
   }
 }
