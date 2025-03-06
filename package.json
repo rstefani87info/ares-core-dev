@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Command line automation for aReS fast programming",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "make:mapper": "node make-mapper.js"
+    "aReS": "node index.js"
   },
   "author": "Roberto Stefani",
   "license": "MIT",
