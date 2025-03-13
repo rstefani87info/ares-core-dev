@@ -25,14 +25,14 @@ if (moduleFunction.includes(':')) {
         const importedModule = await import(moduleName);
         fn = importedModule[functionName];
     } catch (error) {
-        console.error(messages.ERROR_LOADING_MODULE.replace('{module}', moduleName).replace('{error}', error.message));
+        console.error(messages.ERROR_LOADING_MODULE.replace('{module}', moduleName).replace('{error}', error.message), error);
         process.exit(1);
     }
 } else {
     try {
         fn = Object.values(exports).find(f => typeof f === 'function' && f.name === moduleFunction);
     } catch (error) {
-        console.error(messages.ERROR_LOADING_FUNCTION.replace('{function}', moduleFunction).replace('{error}', error.message));
+        console.error(messages.ERROR_LOADING_FUNCTION.replace('{function}', moduleFunction).replace('{error}', error.message) ,error);
         process.exit(1);
     }
 }
@@ -50,7 +50,7 @@ try {
         console.log(result);
     }
 } catch (error) {
-    console.error(messages.ERROR_EXECUTION.replace('{error}', error.message));
+    console.error(messages.ERROR_EXECUTION.replace('{error}', error.message), error);
     process.exit(1);
 }
 
