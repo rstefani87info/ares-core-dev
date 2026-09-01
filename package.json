@@ -2,10 +2,18 @@
   "name": "@ares/core-dev",
   "version": "1.0.0",
   "description": "Command line automation for aReS fast programming",
-  "main": "index.js",
+  "main": "src/cli.js",
   "type": "module",
+  "bin": {
+    "ares-core-dev": "./index.js"
+  },
+  "exports": {
+    ".": "./src/cli.js",
+    "./cli": "./index.js",
+    "./presets/mysql": "./presets/mysql.js"
+  },
   "scripts": {
-    "aReS": "node index.js"
+    "ares-core-dev": "ares-core-dev"
   },
   "author": "Roberto Stefani",
   "license": "MIT",
@@ -19,6 +27,9 @@
   "homepage": "https://github.com/rstefani87info/ares-core-dev#readme",
   "dependencies": {
     "@ares/core": "workspace:^",
+    "@ares/datasource-files": "workspace:^",
+    "@ares/os": "workspace:^",
+    "@ares/scd": "workspace:^",
     "yargs": "^17.7.2"
   }
 }
